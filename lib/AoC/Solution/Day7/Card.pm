@@ -13,8 +13,10 @@ has type => (
 );
 
 sub of {
+    my ($char, %args) = @_;
+
     return AoC::Solution::Day7::Card->new(
-        type => AoC::Solution::Day7::CardType::of(@_),
+        type => AoC::Solution::Day7::CardType::of($char, %args),
     );
 }
 
